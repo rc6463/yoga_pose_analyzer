@@ -1,1 +1,2 @@
 libgl1
+Add system dependencies for OpenCV on Streamlit Cloud
