@@ -1,9 +1,9 @@
-streamlit==1.30.0
-numpy==1.25.2
-Pillow==9.5.0
+streamlit
 opencv-python-headless==4.8.0.76
-mediapipe==0.10.8
-Pin versions for Streamlit Cloud compatibility
+numpy
+Pillow
+mediapipe
+
 
 
 
