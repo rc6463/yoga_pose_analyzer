@@ -1,5 +1,5 @@
-﻿import cv2
-import mediapipe as mp
+#﻿import cv2
+#import mediapipe as mp
 import numpy as np
 import streamlit as st
 from PIL import Image as PILImage
@@ -33,9 +33,9 @@ def check_angle(angle, joint_name):
     return "❌ Bad" if angle < low or angle > high else "✅ Good"
 
 # MediaPipe setup
-mp_pose = mp.solutions.pose
-pose = mp_pose.Pose(static_image_mode=True)
-mp_drawing = mp.solutions.drawing_utils
+#mp_pose = mp.solutions.pose
+#pose = mp_pose.Pose(static_image_mode=True)
+#mp_drawing = mp.solutions.drawing_utils
 
 # Process uploaded file
 if uploaded_file:
@@ -91,9 +91,9 @@ if uploaded_file:
             st.write(f"{k}: {v} ({check_angle(v, k)})")
 
         # Draw landmarks
-        mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
-        image_pil = PILImage.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
-        st.image(image_pil, caption="Pose with Keypoints", use_column_width=True)
+        #mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+       # image_pil = PILImage.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+       # st.image(image_pil, caption="Pose with Keypoints", use_column_width=True)
     else:
         st.error("No pose detected. Try another image.")
 
